@@ -24,21 +24,21 @@ class TarefaActivity : AppCompatActivity(R.layout.activity_tarefa) {
             insets
         }
 
-        TarefaDAO.salvar(Tarefa("Pintar a piscina de rosa", true))
-        TarefaDAO.salvar(Tarefa("Aspirar a entrada da garagem", false))
-
         val edt_nome_tarefa = findViewById<EditText>(R.id.edt_nome_tarefa)
+        val edt_descricao_tarefa = findViewById<EditText>(R.id.edt_descricao_tarefa)
         val btn_salvar_tarefa = findViewById<Button>(R.id.btn_salvar_tarefa)
         val fab_tarefa_lista = findViewById<FloatingActionButton>(R.id.fab_tarefa_lista)
         val fab_volta_menu_principal_tarefa = findViewById<FloatingActionButton>(R.id.fab_volta_menu_principal_tarefa)
 
         btn_salvar_tarefa.setOnClickListener{
             val nomeTarefa = edt_nome_tarefa.text.toString()
+            val descricaoTarefa = edt_descricao_tarefa.text.toString()
 
-            val tarefa = Tarefa(nomeTarefa, false)
+            val tarefa = Tarefa(nomeTarefa, descricaoTarefa, false)
             val mensagem = TarefaDAO.salvar(tarefa)
 
             edt_nome_tarefa.text.clear()
+            edt_descricao_tarefa.text.clear()
 
             Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show()
         }

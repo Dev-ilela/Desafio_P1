@@ -3,16 +3,11 @@ package br.unisanta.aula05.view
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import br.unisanta.aula05.R
-import br.unisanta.aula05.view.FilmeActivity
-import br.unisanta.aula05.view.TarefaActivity
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +19,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             insets
         }
 
-        val btn_menu_filmes = findViewById<Button>(R.id.btn_menu_filme)
-        val btn_menu_tarefa = findViewById<Button>(R.id.btn_menu_tarefa)
+        val btn_menu_filmes = findViewById<Button>(R.id.btn_menu_filmes)
+        val btn_menu_tarefa = findViewById<Button>(R.id.btn_menu_tarefas)
 
         btn_menu_filmes.setOnClickListener{
             val intent = Intent(this, FilmeActivity::class.java)

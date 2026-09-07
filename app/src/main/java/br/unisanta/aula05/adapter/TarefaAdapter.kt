@@ -15,6 +15,7 @@ class TarefaAdapter(private var tarefas:List<Tarefa>):
     class ViewHolder(itemView : View):
         RecyclerView.ViewHolder(itemView){
         val nomeTarefa = itemView.findViewById<TextView>(R.id.tv_tarefa)
+        val descricaoTarefa = itemView.findViewById<TextView>(R.id.tv_descricao)
         val concluido = itemView.findViewById<CheckBox>(R.id.chb_concluido)
     }
 
@@ -30,9 +31,10 @@ class TarefaAdapter(private var tarefas:List<Tarefa>):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val tarefa = tarefas[position]
         holder.nomeTarefa.text = tarefa.nome
-        holder.concluido.isChecked = tarefa.concluido
+        holder.descricaoTarefa.text = tarefa.descricao
+        holder.concluido.isChecked = tarefa.feito
 
-        holder.concluido.setOnCheckedChangeListener { _, isChecked ->  tarefa.concluido = isChecked}
+        holder.concluido.setOnCheckedChangeListener { _, isChecked ->  tarefa.feito = isChecked}
     }
 
 }

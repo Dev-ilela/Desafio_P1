@@ -12,37 +12,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="Cadastro Tarefa"
-        android:textSize="24sp"
+        android:fontFamily="@font/alata"
+        android:text="SanTarefas"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edt_nome_tarefa"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="45dp"
-        android:ems="10"
-        android:hint=" Nome"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_tarefa" />
-
     <Button
         android:id="@+id/btn_salvar_tarefa"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="45dp"
+        android:backgroundTint="#131F54"
         android:text="Salvar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_nome_tarefa" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_descricao_tarefa" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_tarefa_lista"
@@ -52,6 +41,7 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:contentDescription="Ir para lista de tarefas"
+        app:backgroundTint="#131F54"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_send" />
@@ -60,11 +50,37 @@
         android:id="@+id/fab_volta_menu_principal_tarefa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:contentDescription="Volta para o menu principal"
+        app:backgroundTint="#131F54"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fab_tarefa_lista"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <EditText
+        android:id="@+id/edt_descricao_tarefa"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_nome_tarefa" />
+
+    <EditText
+        android:id="@+id/edt_nome_tarefa"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_tarefa" />
 </androidx.constraintlayout.widget.ConstraintLayout>

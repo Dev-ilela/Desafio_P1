@@ -29,10 +29,6 @@ class FilmeActivity : AppCompatActivity(R.layout.activity_filme) {
         val fab_filme_lista = findViewById<FloatingActionButton>(R.id.fab_filme_lista)
         val fab_voltar_menu_principal = findViewById<FloatingActionButton>(R.id.fab_voltar_menu_principal)
 
-        FilmeDAO.salvar(Filme("Harry Potter e o Cálice de Fogo", "Mike Newell"))
-        FilmeDAO.salvar(Filme("Gente Grande", "Dennis Dugan"))
-        FilmeDAO.salvar(Filme("Ela é o cara", "Andy Fickman"))
-
         btn_salvar_filme.setOnClickListener {
             val titulo = edt_titulo.text.toString()
             val diretor = edt_diretor.text.toString()

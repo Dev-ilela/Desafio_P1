@@ -8,32 +8,35 @@
     tools:context=".view.MainActivity">
 
     <Button
-        android:id="@+id/btn_menu_tarefa"
+        android:id="@+id/btn_menu_tarefas"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:text="Menu Tarefas"
+        android:backgroundTint="#131F54"
+        android:text="SanTarefas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_menu_filme" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_menu_filmes" />
 
     <Button
-        android:id="@+id/btn_menu_filme"
+        android:id="@+id/btn_menu_filmes"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="45dp"
-        android:text="Menu Filmes"
+        android:backgroundTint="#6A0202"
+        android:text="SantaFlix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
 
     <TextView
-        android:id="@+id/tv_titulo"
+        android:id="@+id/tv_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="TP 04 - Listas"
-        android:textSize="24sp"
+        android:fontFamily="@font/alata"
+        android:text="SantApp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

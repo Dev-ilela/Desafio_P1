@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#070707"
     tools:context=".view.FilmeListaActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -26,6 +27,7 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:contentDescription="Volta para menu de cadastro filme"
+        app:backgroundTint="#6A0202"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />

@@ -13,6 +13,7 @@ import br.unisanta.aula05.dao.TarefaDAO
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class TarefaListaActivity : AppCompatActivity(R.layout.activity_tarefa_lista) {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

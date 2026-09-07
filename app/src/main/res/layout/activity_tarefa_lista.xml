@@ -24,6 +24,7 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:contentDescription="Voltar para o menu tarefa"
+        app:backgroundTint="#131F54"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />

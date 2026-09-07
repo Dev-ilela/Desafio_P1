@@ -7,7 +7,7 @@
     android:layout_marginLeft="2sp"
     android:layout_marginRight="2sp"
     android:layout_marginBottom="8sp"
-    android:background="#EBE2F4">
+    android:background="#D7D0D0">
 
     <TextView
         android:id="@+id/tv_titulo_filme"
