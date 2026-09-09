@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -23,21 +22,24 @@ class FilmeActivity : AppCompatActivity(R.layout.activity_filme) {
             insets
         }
 
+        val edt_url = findViewById<EditText>(R.id.edt_url)
         val edt_titulo = findViewById<EditText>(R.id.edt_titulo)
-        val edt_diretor = findViewById<EditText>(R.id.edt_diretor)
+        val edt_genero = findViewById<EditText>(R.id.edt_genero)
         val btn_salvar_filme = findViewById<Button>(R.id.btn_salvar_filme)
         val fab_filme_lista = findViewById<FloatingActionButton>(R.id.fab_filme_lista)
         val fab_voltar_menu_principal = findViewById<FloatingActionButton>(R.id.fab_voltar_menu_principal)
 
         btn_salvar_filme.setOnClickListener {
+            val url = edt_url.text.toString()
             val titulo = edt_titulo.text.toString()
-            val diretor = edt_diretor.text.toString()
+            val genero = edt_genero.text.toString()
 
-            val filme = Filme(titulo, diretor)
+            val filme = Filme(titulo,genero, url)
             val mensagem = FilmeDAO.salvar(filme)
 
+            edt_url.text.clear()
             edt_titulo.text.clear()
-            edt_diretor.text.clear()
+            edt_genero.text.clear()
 
             Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show()
         }

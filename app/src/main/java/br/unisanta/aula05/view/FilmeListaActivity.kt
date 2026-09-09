@@ -26,10 +26,12 @@ class FilmeListaActivity : AppCompatActivity(R.layout.activity_filme_lista) {
         val fab_voltar_menu_filme = findViewById<FloatingActionButton>(R.id.fab_voltar_menu_filme)
 
         rv_filmes.adapter = FilmeAdapter(FilmeDAO.obter())
-        rv_filmes.layoutManager  = GridLayoutManager(this, 2)
+        rv_filmes.layoutManager  = LinearLayoutManager(this)
 
         fab_voltar_menu_filme.setOnClickListener{
             finish()
         }
+
+
     }
 }

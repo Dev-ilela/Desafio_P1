@@ -40,12 +40,12 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_titulo_filme_cadastro" />
 
     <EditText
-        android:id="@+id/edt_diretor"
+        android:id="@+id/edt_genero"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="35dp"
         android:ems="10"
-        android:hint="Diretor"
+        android:hint="Gênero"
         android:inputType="text"
         android:textColor="#F8F0F0"
         android:textColorHint="#F8F0F0"
@@ -58,12 +58,13 @@
         android:id="@+id/btn_salvar_filme"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#6A0202"
         android:text="Salvar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_diretor" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_url" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_filme_lista"
@@ -90,4 +91,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <EditText
+        android:id="@+id/edt_url"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#F8F0F0"
+        android:textColorHint="#F8F0F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_genero" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

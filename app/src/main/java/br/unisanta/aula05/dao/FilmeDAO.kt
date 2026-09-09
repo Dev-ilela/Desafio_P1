@@ -11,7 +11,7 @@ class FilmeDAO {
             return "Filme salvo com sucesso!"
         }
 
-        fun obter():List<Filme>{
+        fun obter():MutableList<Filme>{
             return filmes
         }
     }

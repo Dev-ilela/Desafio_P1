@@ -8,26 +8,16 @@
     tools:context=".view.MainActivity">
 
     <Button
-        android:id="@+id/btn_menu_tarefas"
+        android:id="@+id/btn_cadastrar_filmes"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#131F54"
-        android:text="SanTarefas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_menu_filmes" />
-
-    <Button
-        android:id="@+id/btn_menu_filmes"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#6A0202"
-        android:text="SantaFlix"
+        android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_senha" />
 
     <TextView
         android:id="@+id/tv_nome"
@@ -35,10 +25,37 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/alata"
-        android:text="SantApp"
-        android:textSize="30dp"
+        android:text="Login"
+        android:textSize="48dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nome" />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:hint="senha"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
